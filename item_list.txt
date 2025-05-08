@@ -1,0 +1,22 @@
+food,Doro Wat,Spicy chicken stew with boiled egg,150
+food,Kitfo,Minced raw beef seasoned with spices,180
+food,Shiro,Chickpea stew served with injera,90
+food,Tibs,Fried meat cubes with vegetables,130
+food,Injera,Traditional sour flatbread,40
+drink,Bunna,Ethiopian traditional coffee,25
+drink,Telba,Flaxseed drink served chilled,20
+drink,Tella,Homemade traditional beer,35
+drink,Tej,Honey wine in a berele glass,60
+drink,Asharo,Coffee husk tea with herbs,18
+snack,Kolo,Roasted barley and peanuts mix,15
+snack,Dabo Kolo,Crunchy mini bread cubes,12
+snack,Himbasha,Ethiopian sweet bread with spices,25
+snack,Chechebsa,Pan-fried flatbread pieces in spice butter,28
+snack,Firfir,Shredded injera with spiced sauce,30
+food,Beyaynetu,Variety of lentils and stews on injera,110
+drink,Areke,Strong traditional distilled liquor,80
+snack,Berele Dabo,Mini honey bread served with butter,20
+food,Fossolia,Green beans and carrot stew,70
+drink,Nech Bunna,Light roasted white coffee,22
+meat,therefore,yebere,70
+fruit,habhab,red,897

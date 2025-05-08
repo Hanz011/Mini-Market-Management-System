@@ -1,0 +1,13 @@
+Pizza,3,600
+Coffee,5,226.25
+Coffee,4,181
+Coffee,90,4072.5
+Pizza,4,800
+Chocolate,9,225
+Pizza,67,13400
+Coffee,3,135.75
+injera,10,990
+injera,10,990
+injera,10,990
+injera,56,0
+Shiro,3,270
