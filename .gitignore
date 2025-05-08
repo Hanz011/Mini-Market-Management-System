@@ -1,0 +1,36 @@
+# Ignore compiled object files and executables
+*.exe
+*.o
+*.out
+*.obj
+*.a
+*.lib
+*.dll
+
+# Ignore build directories
+/build/
+/bin/
+/obj/
+
+# Ignore system files (e.g., AppData, Windows specific files)
+**/AppData/*
+**/Cookies/*
+**/My Documents/*
+**/Recent/*
+**/Local Settings/*
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore temporary files
+*.log
+*.tmp
+*.bak
+
+# Ignore text files that store passwords
+password.txt
+
+# Ignore text files containing data that should not be versioned
+item_list.txt
+orders.txt
