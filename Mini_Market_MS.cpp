@@ -71,6 +71,32 @@ void write_password(const string &new_pwd)
         cout << "Error: Could not write password to file.\n";
     }
 }
+void change_password() {
+    string current_pwd = read_password();
+    string old_pwd, new_pwd, confirm_pwd;
+
+    cout << "Enter current password: ";
+    getline(cin >> ws, old_pwd);
+
+    if (old_pwd != current_pwd) {
+        cout << "Incorrect password. Password change aborted.\n";
+        return;
+    }
+
+    cout << "Enter new password: ";
+    getline(cin, new_pwd);
+
+    cout << "Confirm new password: ";
+    getline(cin, confirm_pwd);
+
+    if (new_pwd != confirm_pwd) {
+        cout << "Passwords do not match. Password change aborted.\n";
+        return;
+    }
+
+    write_password(new_pwd);
+    cout << "Password changed successfully.\n";
+}
 
 void add_item()
 {
@@ -395,7 +421,7 @@ void edit_item() {
 
     bool found = false;
     for (auto &it : items) {
-        if (it.item_name == name_to_edit) {
+        if (to_lowercase(it.item_name) == to_lowercase(name_to_edit)) {
             found = true;
             cout << "Editing '" << it.item_name << "'. Enter new details:\n";
             cout << "New Type: ";
@@ -458,7 +484,7 @@ void delete_item() {
     bool found = false;
     vector<item> updated_items;
     for (const auto &it : items) {
-        if (it.item_name == name_to_delete) {
+        if (to_lowercase(it.item_name )==to_lowercase( name_to_delete)) {
             found = true;
         } else {
             updated_items.push_back(it);
@@ -502,7 +528,8 @@ void owner_menu() {
         cout << "1. Add Item\n";
         cout << "2. Edit Item\n";
         cout << "3. Delete Item\n";
-        cout << "4. Return to Main Menu\n";
+        cout << "4. Change Password\n";
+        cout << "5. Return to Main Menu\n";        
         cout << "Enter your choice: ";
         cin >> choice;
         cin.ignore();
@@ -511,14 +538,15 @@ void owner_menu() {
             case 1: add_item(); break;
             case 2: edit_item(); break;
             case 3: delete_item(); break;
-            case 4: cout << "Returning to main menu...\n"; cout << "Returning to main menu...\n";
-            Sleep(2000);
-            return; break;
+            case 4: change_password(); break;
+            case 5: cout << "Returning to main menu...\n"; Sleep(2000); return;
             default: cout << "Invalid choice! Try again.\n";  cin.clear();
             cin.ignore(10000, '\n'); 
         }
     } while (choice != 4);
 }
+
+
 
 int main() {
     char select;
